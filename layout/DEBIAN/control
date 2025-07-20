@@ -1,0 +1,10 @@
+Package: com.xelahot.memedit
+Name: MemEdit
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: An iOS tool for jailbroken devices to read/write memory with a UI.
+Maintainer: xelahot
+Author: xelahot
+Section: Tweaks
+Homepage: https://xelahot.github.io/
+Depends: preferenceloader, com.xelahot.libxelahot

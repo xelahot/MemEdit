@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Remove package directory recursively
+rm -R /var/jb/var/mobile/Library/Preferences/com.xelahot.MemEditPref.plist
+
+exit 0
