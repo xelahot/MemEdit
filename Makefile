@@ -21,3 +21,9 @@ SUBPROJECTS += MemEditPref
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 include $(THEOS_MAKE_PATH)/aggregate.mk
+
+after-stage::
+	@echo "Applying permissions..."
+	find $(THEOS_STAGING_DIR) -type f -exec chmod 644 {} \;
+	find $(THEOS_STAGING_DIR) -type f \( -name 'postinst' -o -name 'prerm' \) -exec chmod 755 {} \;
+	find $(THEOS_STAGING_DIR) -type d -exec chmod 755 {} \;

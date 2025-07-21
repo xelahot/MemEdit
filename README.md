@@ -70,16 +70,12 @@ Since some methods must be executed from the SpringBoard, the tweak must inject 
 
 ## 🚧 Known issues
 
-- Not injecting into all apps. Ex: "Espace Client +" (Videotron)
+- Some apps have a problem loading the menu images on jailbreak envrionnements (resolves to embedded images)
 - Sometimes, there's a bolder yellow color in console logs
 - Lag while scrolling in the menu
   
 ## 🧠 Ideas / Feature Roadmap
 
-- Add a button in the console output to clear the logs
-- Add a "Copy latest read bytes to clipboard" option or something like that. If something is already in the clipboard, ask confirmation to overwrite
-- Make the keyboard remember what's being typed in without having to press "return/enter"
-- Automatically clear some old text in the console output when it's too full
 - Add a getFunctionAddressByName feature
 - Add a getFunctionNameByAddress
 - Add an option to log all class/method names being called
@@ -90,8 +86,12 @@ Since some methods must be executed from the SpringBoard, the tweak must inject 
 - Add option to dump a decrypted image to a file
 - Add option to dump headers
 - Add an option to list the structure of the Mach-O image (segments, load commands, etc.)
-- Add a banner to the prefBundle (done in the viewDidLoad)
 - Show some disassambly of a function
 - Unity games support
 - Maybe allow to inject into system apps?
+- Add a button in the console output to clear the logs
+- Add a "Copy latest read bytes to clipboard" option or something like that. If something is already in the clipboard, ask confirmation to overwrite
+- Make the keyboard remember what's being typed in without having to press "return/enter"
+- Automatically clear some old text in the console output when it's too full
+- Add a banner to the prefBundle (done in the viewDidLoad)
 - Add a UI section to the menu to take notes (can be saved & cleared)?
