@@ -1,10 +1,9 @@
-ARCHS = arm64e
-THEOS_PACKAGE_SCHEME = rootless
+ARCHS = arm64 arm64e
 DEBUG = 0
 FINALPACKAGE = 1
 FOR_RELEASE = 1
 PACKAGE_VERSION = $(THEOS_PACKAGE_BASE_VERSION)
-TARGET=iphone:16.5:15.0
+TARGET=iphone:16.5:14.0
 
 include $(THEOS)/makefiles/common.mk
 
@@ -23,7 +22,7 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 include $(THEOS_MAKE_PATH)/aggregate.mk
 
 after-stage::
-	@echo "Applying permissions..."
+	@echo "Fixing permissions in stage..."
 	find $(THEOS_STAGING_DIR) -type f -exec chmod 644 {} \;
 	find $(THEOS_STAGING_DIR) -type f \( -name 'postinst' -o -name 'prerm' \) -exec chmod 755 {} \;
 	find $(THEOS_STAGING_DIR) -type d -exec chmod 755 {} \;
