@@ -7,8 +7,8 @@ A mod menu for iOS apps to view and edit memory at runtime and more. A great too
 ---
 ## ✔️ Compatibility
 
-- Should work at least on iOS 15–18
-- Supports jailbroken environment (only tested on Dopamine 2.0 / rootless jailbreak on iOS 16.5)
+- Should work at least on iOS 14–18
+- Supports jailbroken environment (tested on Dopamine 2.0/rootless jailbreak on iOS 16.5 and Taurine rootful jailbreak on iOS 14.0.1)
 - Supports non-jailbroken environment (even though writting to memory can be more restrictive). Only tested on iOS 16.5 and 18.3.2
 
 ## ⚙️ How to Install
@@ -37,8 +37,7 @@ You must make a custom IPA of the app of you want to use MemEdit with. I use ESi
 
 ### Extra steps specific to rootful jailbreak environments:
 - Add the "libXelahot.dylib" file from the https://github.com/xelahot/libXelahot releases to your Theos "$(THEOS)/lib/libXelahot.dylib" folder (I'm not sure about this, it may be "$(THEOS)/lib/iphone/libXelahot.dylib")
-- Edit the "layout/DEBIAN/control" file and use "Architecture: iphoneos-arm"
-- Remove "THEOS_PACKAGE_SCHEME = rootless" from the Makefile
+- Use the master-rootful-jb branch
 
 ## ⌨️ How to Use/Code
 Since some methods must be executed from the SpringBoard, the tweak must inject into it. The tweak relies on the libXelahot library. It contains useful functions and can be used with inter-process communication (IPC) by sending/receiving notifications. Basically, you can post a notification from a process (ex: the app), listen to it on the other (ex: the SpringBoard) or the opposite.
